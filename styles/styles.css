@@ -180,50 +180,146 @@ footer p a {
   text-decoration: none;
 }
 
-/* Responsive tweaks */
-@media (max-width: 800px) {
+/* Mobile-first: These are the base styles for mobile */
+.header-content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.portfolio-picture {
+  width: clamp(72px, 28vw, 140px);
+  align-self: flex-end;
+  margin-top: 0.5rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+nav ul {
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  padding: 0.6rem 0.75rem;
+}
+
+main {
+  padding: 12px;
+}
+
+.Skills {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Tablet (portrait) */
+@media (min-width: 600px) {
   .header-content {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .portfolio-picture {
-    width: clamp(72px, 28vw, 140px);
-    align-self: flex-end;
-    /* put image to the right */
-    margin-top: 0.5rem;
-  }
-
-  h1 {
-    font-size: 1.6rem;
+    flex-direction: row;
+    align-items: center;
   }
 
   nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: stretch;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
   }
 
-  nav a {
-    display: block;
-    text-align: center;
-    padding: 0.6rem 0.75rem;
+  .portfolio-picture {
+    width: clamp(100px, 15vw, 200px);
+  }
+
+  .Skills {
+    gap: 1rem;
   }
 
   main {
-    padding: 12px;
+    padding: 1.5rem;
   }
 }
 
-@media (min-width: 1200px) {
+/* Tablet (landscape) */
+@media (min-width: 900px) {
+  .header-content {
+    padding: 1.5rem;
+  }
 
-  /* larger profile image on wide screens */
+  .hero {
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem;
+  }
+
   .portfolio-picture {
-    width: clamp(140px, 18vw, 420px);
+    width: clamp(120px, 16vw, 280px);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .introduction {
+    max-width: 500px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .portfolio-picture {
+    width: clamp(140px, 18vw, 320px);
+  }
+
+  .introduction {
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  nav ul {
+    gap: 2rem;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1600px) {
+  .hero {
+    max-width: 1400px;
+    padding: 4rem 2rem;
+  }
+
+  .portfolio-picture {
+    width: clamp(180px, 20vw, 380px);
+  }
+
+  .introduction {
+    max-width: 700px;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .Skills {
+    gap: 1.5rem;
+    font-size: 1.1rem;
   }
 }
