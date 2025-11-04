@@ -248,6 +248,14 @@ main {
     padding: 1.5rem;
   }
 }
+/* Mobile Viewport */
+@media (min-width: 769px) {
+  .header-content {
+    padding: 10px;
+  }
+}
+
+
 
 /* Tablet (landscape) */
 @media (min-width: 900px) {
