@@ -30,14 +30,66 @@ Date: 9-23-2025
     </header>
     <!--This will be the main section of the file-->
     <main>
-        <section id="contact-me">
-            <p>Check out my <a href="https://www.linkedin.com/in/logan-wentz-259500352/" target="_blank"
-                    rel="noopener noreferrer" class="linkedin">LinkedIn</a></p>
-            <iframe title="University of Mary location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10940.243697326681!2d-100.76200731871661!3d46.72425983795849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52d79c3a02b5607d%3A0x738cbb4e2494f768!2sUniversity%20of%20Mary!5e0!3m2!1sen!2sus!4v1759280216389!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
+        <div class="contact-grid">
+            <section id="contact-me" class="contact-map">
+                <p>Check out my <a href="https://www.linkedin.com/in/logan-wentz-259500352/" target="_blank"
+                        rel="noopener noreferrer" class="linkedin">LinkedIn</a></p>
+                <iframe title="University of Mary location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10940.243697326681!2d-100.76200731871661!3d46.72425983795849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52d79c3a02b5607d%3A0x738cbb4e2494f768!2sUniversity%20of%20Mary!5e0!3m2!1sen!2sus!4v1759280216389!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section id="contact-form-section" aria-labelledby="contact-form-heading" class="contact-form-section">
+                <h2 id="contact-form-heading">Send a Message</h2>
+
+                <div class="form-wrapper">
+                    <form class="contact-form" method="post" action="#" novalidate>
+                        <div class="form-row">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="reason">Reason for contact</label>
+                            <select id="reason" name="reason" required>
+                                <option value="">Select a reason</option>
+                                <option value="project">Discuss a project</option>
+                                <option value="job">Job opportunity</option>
+                                <option value="question">General question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="timeframe">Project timeframe (if applicable)</label>
+                            <input type="text" id="timeframe" name="timeframe" placeholder="e.g., 3 months, ASAP">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="budget">Estimated budget (optional)</label>
+                            <input type="text" id="budget" name="budget" placeholder="e.g., $1,000 - $5,000">
+                        </div>
+
+                        <div class="form-row full-width">
+                            <label for="message">Message / Project details</label>
+                            <textarea id="message" name="message" rows="6" required
+                                placeholder="Tell me more about your project or question"></textarea>
+                        </div>
+
+                        <div class="form-row full-width form-actions">
+                            <button type="submit" class="btn-submit">Send message</button>
+                            <button type="reset" class="btn-reset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <p>Say Hello and lets work together!</p>
