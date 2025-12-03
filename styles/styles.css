@@ -101,11 +101,27 @@ nav a {
   text-decoration: none;
   color: #333;
   padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  display: inline-block;
+  transition: color 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
 }
 
-nav a:hover {
-  color: #666;
+/* Subtle lift and focus styles for nav items */
+nav a:hover,
+nav a:focus-visible {
+  transform: translateY(-3px) scale(1.02);
+  color: #444;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  outline: none;
+}
+
+nav a:active {
+  transform: translateY(0) scale(0.995);
+  box-shadow: none;
+}
+
+/* Accessible focus ring */
+nav a:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.12), 0 6px 14px rgba(0, 0, 0, 0.04);
 }
 
 /* Main content styles */
@@ -202,6 +218,27 @@ main {
   max-width: 400px;
 }
 
+/* Hamburger button (desktop-only) */
+.hamburger {
+  display: none;
+  /* mobile-first: hidden on small screens */
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  align-self: center;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
 /* About table styles */
 .table-wrapper {
   overflow-x: auto;
@@ -287,6 +324,15 @@ main {
 
   .contact-map iframe {
     min-height: 420px;
+  }
+}
+
+/* Show hamburger on wider viewports (desktop) */
+@media (min-width: 769px) {
+  .hamburger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
