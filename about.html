@@ -11,6 +11,18 @@ Date: 9-23-2025
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <meta name="description"
+        content="About Logan Wentz — University of Mary student, track & field athlete, studying Computer Information Systems and Business Administration.">
+    <meta name="keywords"
+        content="Logan Wentz, about, University of Mary, track and field, Computer Information Systems, Business Administration">
+    <meta name="author" content="Logan Wentz">
+    <meta property="og:title" content="About — Logan Wentz">
+    <meta property="og:description" content="Learn more about Logan — education, athletics, and interests.">
+    <meta property="og:type" content="profile">
+    <meta property="og:image" content="images/me.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About — Logan Wentz">
+    <meta name="twitter:description" content="Learn more about Logan — education, athletics, and interests.">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -18,6 +30,11 @@ Date: 9-23-2025
     <header>
         <div class="header-content">
             <h1>About Me</h1>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navigation" type="button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
         <nav id="navigation" aria-label="Main navigation">
             <ul>
@@ -30,15 +47,39 @@ Date: 9-23-2025
     </header>
     <!--This will be the main section of the file-->
     <main>
-        <section id="about-me" aria-labelledby="about-heading">
+        <section class="about-table-section" aria-labelledby="about-heading">
             <h2 id="about-heading">About Logan</h2>
-            <ul>
-                <li>Currently I am a senior at the University of Mary</li>
-                <li>I am on the Track and Field team</li>
-                <li>I am a double major studying Computer Information Systems and Business Administration</li>
-                <li>I am from Minot, ND</li>
-                <li>I like to hunt in my free time</li>
-            </ul>
+
+            <div class="table-wrapper">
+                <table class="about-table">
+                    <caption class="visually-hidden">Summary of personal details for Logan Wentz</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Location</th>
+                            <td>Originally from Minot, ND — moved to Bismarck, ND in 2022</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Education</th>
+                            <td>Senior at the University of Mary — Double major: Computer Information Systems &amp;
+                                Business Administration</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Athletics</th>
+                            <td>Track &amp; Field team member</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hobbies</th>
+                            <td>Hunting and outdoor activities</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
     </main>
@@ -46,6 +87,7 @@ Date: 9-23-2025
         <p>Say Hello and lets work together!</p>
         <p><a href="mailto:lwentz1@umary.edu">lwentz1@umary.edu</a></p>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
