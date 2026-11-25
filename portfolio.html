@@ -18,7 +18,7 @@ Date: 9-23-2025
     <meta property="og:title" content="Portfolio — Logan Wentz">
     <meta property="og:description" content="A selection of projects and demos by Logan Wentz.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/placeholder.jpg">
+    <meta property="og:image" content="images/projects/feist-builders.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portfolio — Logan Wentz">
     <meta name="twitter:description" content="A selection of projects and demos by Logan Wentz.">
@@ -48,36 +48,73 @@ Date: 9-23-2025
     <!--This will be the main section of the file-->
     <main>
         <div class="projects-grid">
-            <div class="project-card">
-                <img src="images/placeholder.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Project description</p>
-            </div>
-            <div class="project-card">
-                <img src="images/placeholder.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Project description</p>
-            </div>
-            <div class="project-card">
-                <img src="images/placeholder.jpg" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>Project description</p>
-            </div>
-            <div class="project-card">
-                <img src="images/placeholder.jpg" alt="Project 4">
-                <h3>Project 4</h3>
-                <p>Project description</p>
-            </div>
-            <div class="project-card">
-                <img src="images/placeholder.jpg" alt="Project 5">
-                <h3>Project 5</h3>
-                <p>Project description</p>
-            </div>
-            <div class="project-card">
-                <img src="images/placeholder.jpg" alt="Project 6">
-                <h3>Project 6</h3>
-                <p>Project description</p>
-            </div>
+            <article class="project-card">
+                <img src="images/projects/jumpsedge.jpg" alt="Jumpers Edge landing page showing an athlete mid-jump with tracked metrics">
+                <h3>JumpsEdge</h3>
+                <p>An iPad app for coaches that records an athlete's jump approach and uses Apple's Vision body tracking to measure approach speed, stride length and air time, then saves each jump to the athlete's profile so progress can be tracked over time.</p>
+                <ul class="project-tags" aria-label="Technologies">
+                    <li>Swift</li>
+                    <li>UIKit</li>
+                    <li>Vision</li>
+                    <li>AVFoundation</li>
+                    <li>Core Data</li>
+                </ul>
+                <div class="project-links">
+                    <a class="project-link project-link--secondary" href="https://github.com/loganwentz38/JumpsEdge" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-thumb project-thumb--bidcraft" aria-hidden="true">Bidcraft</div>
+                <h3>Bidcraft</h3>
+                <p>A SaaS bid estimator for general contractors. Users build construction bids with line-item labor, material and equipment pricing plus markup, track each bid from draft to won or lost, and manage Free, Pro or Team plans through Stripe billing. Every table is locked down with Postgres row-level security.</p>
+                <ul class="project-tags" aria-label="Technologies">
+                    <li>Next.js</li>
+                    <li>Tailwind CSS</li>
+                    <li>Supabase</li>
+                    <li>Postgres</li>
+                    <li>Stripe</li>
+                </ul>
+                <div class="project-links">
+                    <a class="project-link" href="https://bidcraft-seven.vercel.app/demo" target="_blank" rel="noopener">Try the demo</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="images/projects/feist-builders.png" alt="Feist Builders website preview with logo and phone number">
+                <h3>Feist Builders Website</h3>
+                <p>A fast, single-page website for a Minot, ND construction company covering custom homes, additions, garages and excavation. It walks visitors through services, the build process and FAQs, and makes it easy to call for a free estimate.</p>
+                <ul class="project-tags" aria-label="Technologies">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Vercel</li>
+                </ul>
+                <div class="project-links">
+                    <a class="project-link" href="https://feist-builders.vercel.app/" target="_blank" rel="noopener">Live site</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-thumb project-thumb--budget" aria-hidden="true">Budget App</div>
+                <h3>Self-Hosted Budget App</h3>
+                <p>A zero-dependency budgeting web app that runs on my home server. It tracks income and expenses, sets monthly budgets by category, keeps all data local in a JSON file, and works on phone or desktop over Tailscale, with light and dark mode.</p>
+                <ul class="project-tags" aria-label="Technologies">
+                    <li>Node.js</li>
+                    <li>JavaScript</li>
+                    <li>Docker</li>
+                    <li>Tailscale</li>
+                </ul>
+            </article>
+            <article class="project-card">
+                <div class="project-thumb project-thumb--dashboard" aria-hidden="true">Home Dashboard</div>
+                <h3>Home Dashboard</h3>
+                <p>A full-screen kiosk dashboard that turns an old laptop into a wall display. It shows Bismarck weather, National Weather Service alerts and radar, sunrise and sunset, hunting conditions with a best-hours score, and countdowns, and it dims itself at night and updates itself from GitHub every night.</p>
+                <ul class="project-tags" aria-label="Technologies">
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Python</li>
+                    <li>Linux</li>
+                </ul>
+            </article>
         </div>
     </main>
     <footer>
