@@ -135,7 +135,6 @@ main {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, minmax(200px, auto));
   gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
@@ -143,6 +142,8 @@ main {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   background: white;
   border-radius: 8px;
   padding: 1.5rem;
@@ -171,6 +172,90 @@ main {
 .project-card p {
   margin: 0;
   color: #666;
+}
+
+/* Text banner used until a project has a screenshot */
+.project-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: white;
+}
+
+.project-thumb--jumpsedge {
+  background: linear-gradient(135deg, #1f3a5f, #3a6ea5);
+}
+
+.project-thumb--budget {
+  background: linear-gradient(135deg, #2f5d3a, #5c9a63);
+}
+
+.project-thumb--bidcraft {
+  background: linear-gradient(135deg, #5a3a1f, #b8742f);
+}
+
+.project-thumb--dashboard {
+  background: linear-gradient(135deg, #2b2b3a, #4f5b7a);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.project-tags li {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #f4ece1;
+  color: #6b5435;
+  font-size: 0.8rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid #8a6d45;
+  border-radius: 4px;
+  background: #8a6d45;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  background: #6b5435;
+  border-color: #6b5435;
+}
+
+.project-link--secondary {
+  background: transparent;
+  color: #8a6d45;
+}
+
+.project-link--secondary:hover,
+.project-link--secondary:focus-visible {
+  background: #8a6d45;
+  color: white;
 }
 
 .hero {
@@ -362,6 +447,18 @@ footer p a {
     grid-template-columns: 1fr;
     padding: 1rem;
     gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+  }
+
+  .project-link {
+    text-align: center;
   }
 
   .header-content {
